@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DVISManager.exe" size="538032">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DVISManager.exe" size="687536">
       <assemblyIdentity name="DVISManager" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>PcF0zHthwq/D8Ztdhh9wucgkLOD0WSCnbKw/h+QJg88=</dsig:DigestValue>
+        <dsig:DigestValue>U1B9pKCrE7qLNVlEDZQyZ4DGJTOsdpgKRUP17ZdFfkM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
