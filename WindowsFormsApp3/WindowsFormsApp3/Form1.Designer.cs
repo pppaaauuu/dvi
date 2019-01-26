@@ -33,19 +33,22 @@
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.dataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet1 = new WindowsFormsApp3.Properties.DataSet1();
             this.DataTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet2 = new WindowsFormsApp3.Properties.DataSet2();
             this.datajustBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet4 = new WindowsFormsApp3.Properties.DataSet4();
-            this.dataSet5BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataTable1BindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet5 = new WindowsFormsApp3.Properties.DataSet5();
+            this.dataSet5BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.datahodBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataTablemBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet3 = new WindowsFormsApp3.Properties.DataSet3();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.label1 = new System.Windows.Forms.Label();
@@ -71,20 +74,22 @@
             this.dataSet4BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataTable1BindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.dataTable1TableAdapter1 = new WindowsFormsApp3.Properties.DataSet5TableAdapters.DataTable1TableAdapter();
-            this.dataTable1BindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataTableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.datajustBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet5BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet5BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.datahodBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTablemBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet3)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
@@ -94,7 +99,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataTableBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet4BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // dataTable1BindingSource
@@ -127,15 +132,20 @@
             this.dataSet4.DataSetName = "DataSet4";
             this.dataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // dataSet5BindingSource
+            // dataTable1BindingSource2
             // 
-            this.dataSet5BindingSource.DataSource = this.dataSet5;
-            this.dataSet5BindingSource.Position = 0;
+            this.dataTable1BindingSource2.DataMember = "DataTable1";
+            this.dataTable1BindingSource2.DataSource = this.dataSet5;
             // 
             // dataSet5
             // 
             this.dataSet5.DataSetName = "DataSet5";
             this.dataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dataSet5BindingSource
+            // 
+            this.dataSet5BindingSource.DataSource = this.dataSet5;
+            this.dataSet5BindingSource.Position = 0;
             // 
             // datahodBindingSource
             // 
@@ -161,12 +171,13 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(884, 460);
+            this.tabControl1.Size = new System.Drawing.Size(938, 600);
             this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.pictureBox1);
             this.tabPage1.Controls.Add(this.panel2);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.comboBox1);
@@ -174,10 +185,22 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(876, 434);
+            this.tabPage1.Size = new System.Drawing.Size(930, 574);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Informe Plantilla";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.logo;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pictureBox1.Location = new System.Drawing.Point(752, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(178, 120);
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
             // 
             // panel2
             // 
@@ -186,9 +209,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.AutoSize = true;
             this.panel2.Controls.Add(this.reportViewer1);
-            this.panel2.Location = new System.Drawing.Point(-4, 53);
+            this.panel2.Location = new System.Drawing.Point(0, 126);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(871, 375);
+            this.panel2.Size = new System.Drawing.Size(934, 452);
             this.panel2.TabIndex = 4;
             // 
             // reportViewer1
@@ -205,7 +228,7 @@
             this.reportViewer1.MinimumSize = new System.Drawing.Size(790, 363);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(871, 375);
+            this.reportViewer1.Size = new System.Drawing.Size(934, 452);
             this.reportViewer1.TabIndex = 3;
             // 
             // label1
@@ -247,7 +270,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(876, 434);
+            this.tabPage2.Size = new System.Drawing.Size(930, 574);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Informe Sales";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -255,6 +278,7 @@
             // reportViewer2
             // 
             this.reportViewer2.BackColor = System.Drawing.Color.LightGray;
+            this.reportViewer2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.reportViewer2.Dock = System.Windows.Forms.DockStyle.Fill;
             reportDataSource2.Name = "DataSetsales";
             reportDataSource2.Value = this.DataTableBindingSource;
@@ -263,11 +287,13 @@
             this.reportViewer2.Location = new System.Drawing.Point(3, 3);
             this.reportViewer2.Name = "reportViewer2";
             this.reportViewer2.ServerReport.BearerToken = null;
-            this.reportViewer2.Size = new System.Drawing.Size(870, 428);
+            this.reportViewer2.Size = new System.Drawing.Size(924, 568);
             this.reportViewer2.TabIndex = 0;
+            this.reportViewer2.ZoomMode = Microsoft.Reporting.WinForms.ZoomMode.FullPage;
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.pictureBox2);
             this.tabPage3.Controls.Add(this.panel1);
             this.tabPage3.Controls.Add(this.button2);
             this.tabPage3.Controls.Add(this.comboBox2);
@@ -275,7 +301,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(876, 434);
+            this.tabPage3.Size = new System.Drawing.Size(930, 574);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Justificant d\'ingrés";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -288,10 +314,10 @@
             this.panel1.AutoScroll = true;
             this.panel1.AutoSize = true;
             this.panel1.Controls.Add(this.reportViewer3);
-            this.panel1.Location = new System.Drawing.Point(3, 73);
+            this.panel1.Location = new System.Drawing.Point(0, 126);
             this.panel1.MinimumSize = new System.Drawing.Size(800, 360);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(871, 360);
+            this.panel1.Size = new System.Drawing.Size(934, 452);
             this.panel1.TabIndex = 3;
             // 
             // reportViewer3
@@ -307,8 +333,9 @@
             this.reportViewer3.Location = new System.Drawing.Point(0, 0);
             this.reportViewer3.Name = "reportViewer3";
             this.reportViewer3.ServerReport.BearerToken = null;
-            this.reportViewer3.Size = new System.Drawing.Size(871, 360);
+            this.reportViewer3.Size = new System.Drawing.Size(934, 452);
             this.reportViewer3.TabIndex = 0;
+            this.reportViewer3.ZoomPercent = 70;
             // 
             // button2
             // 
@@ -348,7 +375,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(876, 434);
+            this.tabPage4.Size = new System.Drawing.Size(930, 574);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Informe Doctors";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -364,8 +391,9 @@
             this.reportViewer4.Location = new System.Drawing.Point(3, 3);
             this.reportViewer4.Name = "reportViewer4";
             this.reportViewer4.ServerReport.BearerToken = null;
-            this.reportViewer4.Size = new System.Drawing.Size(870, 428);
+            this.reportViewer4.Size = new System.Drawing.Size(924, 568);
             this.reportViewer4.TabIndex = 0;
+            this.reportViewer4.ZoomMode = Microsoft.Reporting.WinForms.ZoomMode.FullPage;
             // 
             // dataTable1TableAdapter
             // 
@@ -413,17 +441,25 @@
             // 
             this.dataTable1TableAdapter1.ClearBeforeFill = true;
             // 
-            // dataTable1BindingSource2
+            // pictureBox2
             // 
-            this.dataTable1BindingSource2.DataMember = "DataTable1";
-            this.dataTable1BindingSource2.DataSource = this.dataSet5;
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.logo;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pictureBox2.Location = new System.Drawing.Point(752, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(178, 120);
+            this.pictureBox2.TabIndex = 6;
+            this.pictureBox2.TabStop = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(884, 460);
+            this.ClientSize = new System.Drawing.Size(938, 600);
             this.Controls.Add(this.tabControl1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Informes sanitat";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -433,14 +469,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.datajustBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet5BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet5BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.datahodBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTablemBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet3)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.tabPage2.ResumeLayout(false);
@@ -453,7 +491,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataTableBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet4BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -501,6 +539,8 @@
         private System.Windows.Forms.BindingSource dataTable1BindingSource1;
         private Properties.DataSet5TableAdapters.DataTable1TableAdapter dataTable1TableAdapter1;
         private System.Windows.Forms.BindingSource dataTable1BindingSource2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 
